@@ -1,0 +1,28 @@
+.head
+{
+	font-size: 50px;
+	color: red;
+	text-shadow: 3px 2px blue;
+}
+.head1
+{
+	transform: rotate(-90deg);
+	position: absolute;
+    top: 11px;
+    left: 258px;
+    font-size: 28px;
+	color: red;
+	text-align: left;
+	text-shadow: 3px 2px blue;
+}
+.headimage
+{
+    width: 150px;
+    height: 80px;
+}
+.loginbutton
+{
+	position :absolute;
+	top: 15px;
+	right: 10px;
+}
