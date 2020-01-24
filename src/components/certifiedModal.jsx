@@ -13,14 +13,14 @@ class NewModal extends Component
     render()
     {
         return (
-            <div className="container" style={{height:"330px",marginBottom:"30px",marginTop:"20px",backgroundColor:"white"}}>
+            <div className="container" style={{height:"500px",marginBottom:"30px",marginTop:"20px",backgroundColor:"white"}}>
                 <Button className="btn btn-danger d-flex" onClick={this.props.changeModal}> GO BACK </Button>
                         <div className="container" style={{marginBottom:"30px",marginTop:"20px",backgroundColor:"white"}}>
                             <Carousel>
                             {
                             this.state.car.media.photo_links.map((image)=>{
                                 return <Carousel.Item>
-                                <img style = {{height:"300px"}} className="d-block w-100" src={image} alt="first"/>
+                                <img style = {{height:"450px"}} className="d-block w-100" src={image} alt=""/>
                                 </Carousel.Item>
                             })
                             }

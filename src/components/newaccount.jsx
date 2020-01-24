@@ -88,13 +88,6 @@ class NewAccount extends Component
     onsubmitHandeler = (event)=>
     {
         event.preventDefault();
-        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-        if (reg.test(event.target.Email.value) === false) 
-        {
-            alert('Invalid Email Address');
-        }
-        else
-        {
             var phoneno = /^\d{10}$/;
             if(event.target.Phone.value.match(phoneno) === false)
             {
@@ -129,7 +122,7 @@ class NewAccount extends Component
                     }
                 }
             }
-        }
+        
     }
     render() {
         if(this.state.res===true)
@@ -152,38 +145,39 @@ class NewAccount extends Component
         return(
             <React.Fragment>
             <div>
+                <h2 className="col-md-3 mb-3">Create New Account</h2>
             <form onSubmit={this.onsubmitHandeler}>
             <div className="form-row">
-            <div className="col-md-4 mb-3">
-                < label for="Firstname">First name</label>
+            <div className="col-md-3 mb-3">
+                < label htmlFor="Firstname">First name</label>
                 <input type="text" className="form-control" id="Firstname" placeholder="First name"  required></input>
             </div>
-            <div className="col-md-4 mb-3">
-                <label for="Lastname">Last name</label>
+            <div className="col-md-3 mb-3">
+                <label htmlFor="Lastname">Last name</label>
                 <input type="text" className="form-control" id="Lastname" placeholder="Last name"  required></input>
             </div>
             <div className="col-md-4 mb-3">
-                <label for="Email">Email ID</label>
+                <label htmlFor="Email">Email ID</label>
                 <div className="input-group">
-                <input type="text" className="form-control" id="Email" placeholder="e.g.abc@gmail.com" aria-describedby="inputGroupPrepend2" required></input>
+                <input type="email" className="form-control" id="Email" placeholder="e.g.abc@gmail.com" aria-describedby="inputGroupPrepend2" required></input>
                 </div>
             </div>
             </div>
             <div className="form-row">
-            <div className="col-md-6 mb-3">
-                <label for="Phone">Phone Number</label>
-                <input type="text" className="form-control" id="Phone" required></input>
+            <div className="col-md-5 mb-3">
+                <label htmlFor="Phone">Phone Number</label>
+                <input type="number" className="form-control" id="Phone" required></input>
             </div>
             <div className="col-md-3 mb-3">
-                <label for="Password">Password</label>
+                <label htmlFor="Password">Password</label>
                 <input type="password" className="form-control" id="Password"required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onChange={this.passwordCheck}  />
             </div>
             <div className="col-md-3 mb-3">
-                <label for="Confirm">Confirm Password</label>
+                <label htmlFor="Confirm">Confirm Password</label>
                 <input type="password" className="form-control" id="Confirm" required></input>
             </div>
             </div>
-            <button className="btn btn-primary" type="submit">Create Account</button>
+            <button className="btn btn-outline-dark btn-light" type="submit">Create Account</button>
         </form>
         <div id="message">
         <h3>Password must contain the following:</h3>

@@ -9,7 +9,7 @@ var app = express();
 app.use(cors())
 app.use(express.urlencoded({extended:true}))
 app.use(express.json());
-const SECRET_KEY = 'waowao';
+const SECRET_KEY = 'CAREACH_SECRET_KEY';
 const dotenv = require('dotenv');
 dotenv.config();
 mongoose.connect(process.env.MONGO_ATLAS_URL,{useNewUrlParser:true,useFindAndModify: false,useUnifiedTopology:true,useNewUrlParser:true}).then(()=>{
@@ -86,7 +86,7 @@ app.post('/userLogin',function(req,res){
             res.json("noUser");
         }
         else{
-            jwt.sign(mail,SECRET_KEY,(err,token)=>{
+           jwt.sign(mail,SECRET_KEY,(err,token)=>{
                 if(err)
                 {
                     res.send(err);
@@ -99,6 +99,8 @@ app.post('/userLogin',function(req,res){
     })
 })
 
+
+// login for admin
 app.post('/adminLogin',function(req,res){
     var mail = req.body.mail;
     var pass = req.body.pass;
@@ -200,7 +202,6 @@ app.post('/usercar',JWTValidator,function(req,res){
     Users.findOneAndUpdate({emailid:req.email},{$pull:{sell:{id:req.body.data.id}}})
     .then((u)=>     
     {
-        console.log(u)
         res.send("Car Removed");
     })
 })
@@ -226,7 +227,6 @@ app.post('/sellCar',urlencodedParser,JWTValidator,function(req,res){
         }
         else
         {
-            console.log(c);
             res.json(c);
         }
     })

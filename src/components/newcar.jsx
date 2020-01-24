@@ -179,7 +179,7 @@ class Certified extends Component
                 <div className="d-flex flex-column">
                     <h2>Quick Search</h2>
                     <ButtonGroup size="sm">
-                    <Button className="btn btn-outline-light btn-dark" onClick={this.butttonClicked.bind(this,'1')} active={this.state.button==='1'}>All Categories</Button>
+                    <Button className="btn btn-outline-light btn-dark" style={{height:"90px"}} onClick={this.butttonClicked.bind(this,'1')} active={this.state.button==='1'}>All Categories</Button>
                     <Button className="btn btn-outline-light btn-dark" onClick={this.butttonClicked.bind(this,'2')} active={this.state.button==='2'}>By Model</Button>
                     <Button className="btn btn-outline-light btn-dark" onClick={this.butttonClicked.bind(this,'3')} active={this.state.button==='3'}>By Body Type</Button>
                     <Button className="btn btn-outline-light btn-dark" onClick={this.butttonClicked.bind(this,'4')} active={this.state.button==='4'}>By Price</Button>
@@ -210,7 +210,7 @@ class Certified extends Component
                 <div className="d-flex flex-column">
                     <h2>Quick Search</h2>
                     <ButtonGroup size="sm">
-                    <Button className="btn btn-outline-light btn-dark" onClick={this.butttonClicked.bind(this,'1')} active={this.state.button==='1'}>All Categories</Button>
+                    <Button className="btn btn-outline-light btn-dark" style={{height:"90px"}} onClick={this.butttonClicked.bind(this,'1')} active={this.state.button==='1'}>All Categories</Button>
                     <Button className="btn btn-outline-light btn-dark" onClick={this.butttonClicked.bind(this,'2')} active={this.state.button==='2'}>By Model</Button>
                     <Button className="btn btn-outline-light btn-dark" onClick={this.butttonClicked.bind(this,'3')} active={this.state.button==='3'}>By Body Type</Button>
                     <Button className="btn btn-outline-light btn-dark" onClick={this.butttonClicked.bind(this,'4')} active={this.state.button==='4'}>By Price</Button>
@@ -250,7 +250,7 @@ class Certified extends Component
             <div className="d-flex flex-column">
                 <h2>Quick Search</h2>
                 <ButtonGroup size="sm">
-                <Button className="btn btn-outline-light btn-dark" onClick={this.butttonClicked.bind(this,'1')} active={this.state.button==='1'}>All Categories</Button>
+                <Button className="btn btn-outline-light btn-dark" style={{height:"90px"}} onClick={this.butttonClicked.bind(this,'1')} active={this.state.button==='1'}>All Categories</Button>
                 <Button className="btn btn-outline-light btn-dark" onClick={this.butttonClicked.bind(this,'2')} active={this.state.button==='2'}>By Model</Button>
                 <Button className="btn btn-outline-light btn-dark" onClick={this.butttonClicked.bind(this,'3')} active={this.state.button==='3'}>By Body Type</Button>
                 <Button className="btn btn-outline-light btn-dark" onClick={this.butttonClicked.bind(this,'4')} active={this.state.button==='4'}>By Price</Button>
@@ -291,7 +291,7 @@ class Certified extends Component
             <div className="d-flex flex-column">
                 <h2>Quick Search</h2>
                 <ButtonGroup size="sm">
-                <Button className="btn btn-outline-light btn-dark" onClick={this.butttonClicked.bind(this,'1')} active={this.state.button==='1'}>All Categories</Button>
+                <Button className="btn btn-outline-light btn-dark" style={{height:"90px"}} onClick={this.butttonClicked.bind(this,'1')} active={this.state.button==='1'}>All Categories</Button>
                 <Button className="btn btn-outline-light btn-dark" onClick={this.butttonClicked.bind(this,'2')} active={this.state.button==='2'}>By Model</Button>
                 <Button className="btn btn-outline-light btn-dark" onClick={this.butttonClicked.bind(this,'3')} active={this.state.button==='3'}>By Body Type</Button>
                 <Button className="btn btn-outline-light btn-dark" onClick={this.butttonClicked.bind(this,'4')} active={this.state.button==='4'}>By Price</Button>

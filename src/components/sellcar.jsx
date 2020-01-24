@@ -115,7 +115,7 @@ class Sellcar extends Component
                     </select>
                 </div>
                 <div className="col-md-5 mb-3">
-                    <label className="sr-only" for="price">Expected Price</label>
+                    <label className="sr-only" htmlFor="price">Expected Price</label>
                         <div className="input-group mb-2">
                             <div className="input-group-prepend">
                                 <div className="input-group-text">$</div>
