@@ -8,16 +8,16 @@ class CarouselMain extends Component
     render()
     {
         return (
-            <div className="container" style={{height:"330px",marginBottom:"30px",marginTop:"20px",backgroundColor:"white"}}>
+            <div className="container-fluid" style={{height:"400px",marginBottom:"30px",marginTop:"20px",backgroundColor:"white"}}>
                 <Carousel>
                     <Carousel.Item>
-                        <img style = {{height:"300px"}} className="d-block w-100" src={image} alt="first"/>
+                        <img style = {{height:"350px"}} className="d-block w-100" src={image} alt="first"/>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img style = {{height:"300px"}} className="d-block w-100" src={image1} alt="first"/>
+                        <img style = {{height:"350px"}} className="d-block w-100" src={image1} alt="first"/>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img style = {{height:"300px"}} className="d-block w-100" src={image2} alt="first"/>
+                        <img style = {{height:"350px"}} className="d-block w-100" src={image2} alt="first"/>
                     </Carousel.Item>
                 </Carousel>
             </div>

@@ -214,7 +214,7 @@ class Certified extends Component
                                 <div className="card-body">
                                     <h5 className="card-title">{car.heading}</h5>
                                     <p>{car.build.year} | {car.build.fuel_type} | {car.miles}</p>
-                                    <h2>Rs.{Number(car.price)*this.state.rate}</h2>
+                                    <h2>Rs.{Number(car.price)*70}</h2>
                                     <button className="btn btn-primary btn-sm" onClick={()=>this.ModalHandle(true,car)}>View Details</button>
                                     <button className="btn btn-primary btn-sm" onClick={()=>this.DealerHandle(true,car)}>Contact Dealer</button>
                                 </div>
