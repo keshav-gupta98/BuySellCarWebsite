@@ -115,17 +115,28 @@ class Admin extends Component
             )
         }
         return(
-            <div className="container">
-                <form onSubmit={this.submitHandler}>
-                <div className="col-md-4 mb-3">
-                    < label htmlFor="email">Email</label>
-                    <input type="text" className="form-control" id="email" placeholder="Email Id"  required></input>
+            <div className="container mt-4" style={{backgroundColor:"white"}}>
+                <div className="offset-md-3 offset-lg-3 offset-sm-2 col-md-6 col-lg-6 col-sm-5">
+                    <h2> Login to Admin Account</h2>
                 </div>
-                <div className="col-md-4 mb-3">
-                    <label htmlFor="password">Last name</label>
+                <form onSubmit={this.submitHandler}>
+                <div className="row form-group">
+                <div className="offset-md-3 offset-lg-3 offset-sm-2 col-md-6 col-lg-6 col-sm-5">
+                    < label htmlFor="email">Email</label>
+                    <input type="text" className="form-control" id="email" placeholder="Email"  required></input>
+                </div>
+                </div>
+                <div className="row form-group">
+                <div className="offset-md-3 offset-lg-3 offset-sm-2 col-md-6 col-lg-6 col-sm-5">
+                    <label htmlFor="password">Password</label>
                     <input type="password" className="form-control" id="password" placeholder="Password"  required></input>
                 </div>
-                <button className="btn btn-primary" type="submit">Login</button>
+                </div>
+                <div className="row form-group">
+                <div className="offset-md-3 offset-sm-1 offset-lg-3 col-md-2 col-lg-2 col-sm-1">
+                    <button className="btn btn-outline-dark btn-light" type="submit">Login</button>
+                </div>
+                </div>
                 </form>
             </div>
         )
