@@ -10,7 +10,6 @@ class Profile extends Component
     constructor()
     {
         super();
-//        var a = localStorage.getItem('id');
         this.state = {
             person:[],
             loading:false,
@@ -27,7 +26,6 @@ class Profile extends Component
             }
         }).then(res =>
         {
-            console.log(res.data);
             this.setState({person:res.data,loading:true});  
         })
     }
@@ -134,9 +132,9 @@ class Profile extends Component
                         <div className="col-md-3 col-lg-3 col-sm-10">
                             <div className="card" style={{width: "15rem"}}>
                                 <form onSubmit={this.onsubmitHandeler}>
-                                <label for="Password">New Password:</label>
+                                <label htmlFor="Password">New Password:</label>
                                 <input type="password" id="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password should be greater than 8 characters,must contain at least 1 lower case,upper case,number"></input>
-                                <label for="Confirm">Confirm Password:</label>
+                                <label htmlFor="Confirm">Confirm Password:</label>
                                 <input type="password" id="Confirm" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></input>
                                 <button className="btn btn-outline-dark btn-light text-right" type="submit">CHANGE PASSWORD</button>  
                                 </form>

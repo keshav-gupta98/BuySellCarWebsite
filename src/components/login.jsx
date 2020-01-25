@@ -9,7 +9,6 @@ class Login extends Component
     {
         super();
         this.state = {
-            id:"3489",
             mail:"",
             pass:"",
             loggedin:false,
@@ -19,8 +18,6 @@ class Login extends Component
     {
         event.preventDefault();
         console.log(this.state); 
-        console.log(event.target.email.value);
-        console.log(event.target.password.value);
             axios.post('http://localhost:8000/userLogin',{
                             mail:event.target.email.value,
                             pass:event.target.password.value
@@ -34,9 +31,8 @@ class Login extends Component
                                 }
                                 else
                                 {
-                                    this.setState({loggedin:true,id:res.data._id});
+                                    this.setState({loggedin:true});
                                     setTimeout(()=>{
-                                        console.log(this.state.loggedin);
                                         localStorage.setItem('login',"true");
                                         localStorage.setItem('token',res.data.token);
                                         this.props.nature("true")
