@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import './externalcss.css';
 import { Link } from 'react-router-dom';
-import image from './images/image.jpg';
+import image from './images/image.png';
 import 'bootstrap/dist/css/bootstrap.css';
 class Title extends Component
 {
@@ -20,4 +20,4 @@ class Title extends Component
             )
     }
 }
-export default Title 
+export default Title

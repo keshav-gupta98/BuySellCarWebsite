@@ -112,7 +112,13 @@ class Profile extends Component
                 <UsedModal id={this.state.id} changeModal={this.changeModal}/>
             )
         }
-        if(localStorage.getItem('login') === "true")
+        if(localStorage.getItem('token') === null)
+        {
+            return (
+                <Redirect to="/"/>
+            )
+        }
+        else
         {
             return (
                 <div className="container" style={{backgroundColor:"white"}}>
@@ -156,12 +162,6 @@ class Profile extends Component
                     </div>
                     </div>
                 </div>
-            )
-        }
-        else
-        {
-            return (
-                <Redirect to="/"/>
             )
         }
     }

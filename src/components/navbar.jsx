@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import {Link} from 'react-router-dom';
 class Navbar1 extends Component
 {
   render()
@@ -12,11 +13,11 @@ class Navbar1 extends Component
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="/">HOME</Nav.Link>
-          <Nav.Link href="newcar">NEW CARS</Nav.Link>
-          <Nav.Link href="usedcar">USED CARS</Nav.Link>
-          <Nav.Link href="sellcar">SELL YOUR CAR</Nav.Link>
-          <Nav.Link href="certified">CERTIFIED CARS</Nav.Link>
-          <Nav.Link href="profile">PROFILE</Nav.Link>
+          <Link className="nav-link" to="newcar">NEW CARS</Link>
+          <Link className="nav-link" to="usedcar">USED CARS</Link>
+          <Link className="nav-link" to="sellcar">SELL YOUR CAR</Link>
+          <Link className="nav-link" to="certified">CERTIFIED CARS</Link>
+          <Link className="nav-link" to="profile">PROFILE</Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

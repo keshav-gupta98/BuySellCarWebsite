@@ -88,8 +88,15 @@ class NewAccount extends Component
     onsubmitHandeler = (event)=>
     {
         event.preventDefault();
+        var regName =  /^[a-zA-Z]+$/; 
+        if(!regName.test(document.getElementById('Firstname').value) || !regName.test(document.getElementById('Lastname').value))
+        {
+            alert('Invalid Name')
+        }
+        else
+        {
             var phoneno = /^\d{10}$/;
-            if(event.target.Phone.value.match(phoneno) === false)
+            if(event.target.Phone.value.match(phoneno) === false || event.target.Phone.value.length !== 10)
             {
                 alert('Invalid Phone Number');
             }
@@ -122,7 +129,7 @@ class NewAccount extends Component
                     }
                 }
             }
-        
+        }
     }
     render() {
         if(this.state.res===true)
@@ -150,7 +157,7 @@ class NewAccount extends Component
             <div className="form-row">
             <div className="col-md-3 mb-3">
                 < label htmlFor="Firstname">First name</label>
-                <input type="text" className="form-control" id="Firstname" placeholder="First name"  required></input>
+                <input type="name" className="form-control" id="Firstname" placeholder="First name"  required></input>
             </div>
             <div className="col-md-3 mb-3">
                 <label htmlFor="Lastname">Last name</label>
